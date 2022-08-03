@@ -60,11 +60,11 @@ namespace MVVMExample.Viewmodel
             Buttons.Add(new ButtonViewmodel { BtnColor="LightGray",GridColumn = 0, GridRow = 0, Content = "D", PressBtn = new RelayCommand(o => Clear()) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "LightGray", GridColumn = 1, GridRow = 0, Content = "C", PressBtn = new RelayCommand(o => Clear()) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "LightGray", GridColumn = 2, GridRow = 0, Content = "AC", PressBtn = new RelayCommand(o => Clear()) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 0, Content = "÷", PressBtn = new RelayCommand(o=> Print("/")) });
+            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 0, Content = "÷", PressBtn = new RelayCommand(o=> Print("÷")) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 1, Content = "7", PressBtn = new RelayCommand(o => Print("7")) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 1, Content = "8", PressBtn = new RelayCommand(o => Print("8")) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 1, Content = "9", PressBtn = new RelayCommand(o => Print("9")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 1, Content = "x", PressBtn = new RelayCommand(o => Print("*")) });
+            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 1, Content = "x", PressBtn = new RelayCommand(o => Print("x")) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 2, Content = "4", PressBtn = new RelayCommand(o => Print("4")) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 2, Content = "5", PressBtn = new RelayCommand(o => Print("5")) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 2, Content = "6", PressBtn = new RelayCommand(o => Print("6")) });
@@ -79,6 +79,7 @@ namespace MVVMExample.Viewmodel
         }
 
         private int sum = 0;  //store the result
+
         void Print(string str)
         {
             if (Content == "0")
@@ -90,6 +91,7 @@ namespace MVVMExample.Viewmodel
         {
             Content = "0";
             sum = 0;
+            Postorder = null;
         }
 
         int priority(char op)
@@ -101,18 +103,16 @@ namespace MVVMExample.Viewmodel
                 default: return 0;
             }
         }
-
-        public String PostFix;
-        void Calculate()
+        void inToPostOrder(String s)
         {
             int top = 0;
-            char[] stack = new char[5];
-            foreach(char c in Content)
+            char[] stack = new char[10];
+            foreach (char c in s)  //inToPostFix
             {
                 switch (c)
                 {
                     default:
-                        PostFix += c;
+                        Postorder += c;
                         break;
                     case '+':
                     case '-':
@@ -120,20 +120,36 @@ namespace MVVMExample.Viewmodel
                     case '÷':
                         while (priority(stack[top]) >= priority(c))
                         {
-                            PostFix += stack[top--];
+                            Postorder += stack[top--];
                         }
                         stack[++top] = c;
                         break;
                 }
-                while (top > 0)
-                {
-                    PostFix += stack[top--];
-                }
-                foreach(char s in PostFix)
-                {
-                    System.Console.WriteLine(s);
-                }
             }
+            while (top > 0)
+            {
+                Postorder += stack[top--];
+            }
+        }
+
+        void inToPreOrder(String s)
+        {
+            char[] chars = s.ToCharArray();
+            int reTop = 0;
+            String reverse = string.Empty;
+            int stTop = 0;
+            char[] stack = new char[10];
+            for (int i = chars.Length - 1; i >= 0; i--)
+            {
+                reverse += chars[i];
+            }
+            System.Console.WriteLine(reverse);
+        }
+
+        void Calculate()
+        {
+            inToPostOrder(Content);
+            inToPreOrder(Content);
         }
 
         void Insert()
