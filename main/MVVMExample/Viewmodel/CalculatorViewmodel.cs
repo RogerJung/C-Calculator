@@ -57,7 +57,7 @@ namespace MVVMExample.Viewmodel
         public void Loadcalculator()
         {
             Buttons = new ObservableCollection<ButtonViewmodel>();
-            Buttons.Add(new ButtonViewmodel { BtnColor="LightGray",GridColumn = 0, GridRow = 0, Content = "D", PressBtn = new RelayCommand(o => Clear()) });
+            Buttons.Add(new ButtonViewmodel { BtnColor="LightGray",GridColumn = 0, GridRow = 0, Content = "D", PressBtn = new RelayCommand(o => Delete()) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "LightGray", GridColumn = 1, GridRow = 0, Content = "C", PressBtn = new RelayCommand(o => Clear()) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "LightGray", GridColumn = 2, GridRow = 0, Content = "AC", PressBtn = new RelayCommand(o => Clear()) });
             Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 0, Content = "÷", PressBtn = new RelayCommand(o=> Print("÷")) });
@@ -79,6 +79,7 @@ namespace MVVMExample.Viewmodel
         }
 
         private int sum = 0;  //store the result
+        int flag = 0;
 
         void Print(string str)
         {
@@ -91,7 +92,16 @@ namespace MVVMExample.Viewmodel
         {
             Content = "0";
             sum = 0;
+            flag = 0;
             Postorder = null;
+            Preorder = null;
+            Decimal = null;
+            Binary = null;
+        }
+
+        void Delete()
+        {
+            Content = Content.Substring(0, Content.Length - 1);
         }
 
         int priority(char op)
@@ -130,26 +140,112 @@ namespace MVVMExample.Viewmodel
             {
                 Postorder += stack[top--];
             }
+            Value(Postorder);
         }
+
 
         void inToPreOrder(String s)
         {
             char[] chars = s.ToCharArray();
-            int reTop = 0;
             String reverse = string.Empty;
-            int stTop = 0;
+            int top = 0;
             char[] stack = new char[10];
             for (int i = chars.Length - 1; i >= 0; i--)
             {
                 reverse += chars[i];
             }
-            System.Console.WriteLine(reverse);
+            foreach (char c in reverse)  //inToPrefix
+            {
+                switch (c)
+                {
+                    default:
+                        Preorder += c;
+                        break;
+                    case '+':
+                    case '-':
+                    case 'x':
+                    case '÷':
+                        while (priority(stack[top]) >= priority(c))
+                        {
+                            Preorder += stack[top--];
+                        }
+                        stack[++top] = c;
+                        break;
+                }
+            }
+            while (top > 0)
+            {
+                Preorder += stack[top--];
+            }
+            char[] temp = Preorder.ToCharArray();
+            Preorder = String.Empty;
+            for (int i = temp.Length - 1; i >= 0; i--)
+            {
+                Preorder += temp[i];
+            }
+        }
+
+        void Value(String s)
+        {
+            int top  = 0;
+            int[] stack = new int[10];
+            foreach (char c in s)
+            {
+                switch (c)
+                {
+                    default:
+                        stack[top] = c - '0';
+                        top++;
+                        break;
+                    case '+':
+                        top--;
+                        stack[top - 1] = stack[top-1] + stack[top];
+                        break;
+                    case '-':
+                        top--;
+                        stack[top - 1] = stack[top-1] - stack[top];
+                        break;
+                    case 'x':
+                        top--;
+                        stack[top - 1] = stack[top-1] * stack[top];
+                        break;
+                    case '÷':
+                        top--;
+                        stack[top - 1] = stack[top-1] / stack[top];
+                        break;
+                }
+            }
+            Decimal = stack[top - 1].ToString();
+            ToBinary(stack[top - 1]);
+        }
+
+        void ToBinary(int sum)
+        {
+            int i = 0;
+            char[] chars = new char[15];
+            while (sum >= 1)
+            {
+                if (sum % 2 == 0)
+                    chars[i] = '0';
+                else
+                    chars[i] = '1';
+                sum /= 2;
+                i++;
+            }
+            for (i = chars.Length - 1; i >= 0; i--)
+            {
+                Binary += chars[i];
+            }
         }
 
         void Calculate()
         {
-            inToPostOrder(Content);
-            inToPreOrder(Content);
+            if (flag == 0)
+            {
+                inToPostOrder(Content);
+                inToPreOrder(Content);
+            }
+            flag = 1;
         }
 
         void Insert()
