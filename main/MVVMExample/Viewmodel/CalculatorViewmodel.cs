@@ -57,28 +57,28 @@ namespace MVVMExample.Viewmodel
         public void Loadcalculator()
         {
             Buttons = new ObservableCollection<ButtonViewmodel>();
-            Buttons.Add(new ButtonViewmodel { BtnColor="LightGray",GridColumn = 0, GridRow = 0, Content = "D", PressBtn = new RelayCommand(o => Delete()) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "LightGray", GridColumn = 1, GridRow = 0, Content = "C", PressBtn = new RelayCommand(o => Clear()) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "LightGray", GridColumn = 2, GridRow = 0, Content = "AC", PressBtn = new RelayCommand(o => Clear()) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 0, Content = "÷", PressBtn = new RelayCommand(o=> Print("÷")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 1, Content = "7", PressBtn = new RelayCommand(o => Print("7")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 1, Content = "8", PressBtn = new RelayCommand(o => Print("8")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 1, Content = "9", PressBtn = new RelayCommand(o => Print("9")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 1, Content = "x", PressBtn = new RelayCommand(o => Print("x")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 2, Content = "4", PressBtn = new RelayCommand(o => Print("4")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 2, Content = "5", PressBtn = new RelayCommand(o => Print("5")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 2, Content = "6", PressBtn = new RelayCommand(o => Print("6")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 2, Content = "-", PressBtn = new RelayCommand(o => Print("-")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 3, Content = "1", PressBtn = new RelayCommand(o => Print("1")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 3, Content = "2", PressBtn = new RelayCommand(o => Print("2")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 3, Content = "3", PressBtn = new RelayCommand(o => Print("3")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 3, Content = "+", PressBtn = new RelayCommand(o => Print("+")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 4, Content = "0", GridColumnSpan = 2, PressBtn = new RelayCommand(o => Print("0")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 4, Content = ".", PressBtn = new RelayCommand(o => Print(".")) });
-            Buttons.Add(new ButtonViewmodel { BtnColor = "DarkOrange", GridColumn = 3, GridRow = 4,  Content = "=", PressBtn = new RelayCommand(o => Calculate()) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35",BtnColor="LightGray",GridColumn = 0, GridRow = 0, Content = "D", PressBtn = new RelayCommand(o => Delete()) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "LightGray", GridColumn = 1, GridRow = 0, Content = "C", PressBtn = new RelayCommand(o => Clear()) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "LightGray", GridColumn = 2, GridRow = 0, Content = "AC", PressBtn = new RelayCommand(o => Clear()) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "DarkOrange", GridColumn = 3, GridRow = 0, Content = "÷", PressBtn = new RelayCommand(o=> Print("÷")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 1, Content = "7", PressBtn = new RelayCommand(o => Print("7")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 1, Content = "8", PressBtn = new RelayCommand(o => Print("8")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 1, Content = "9", PressBtn = new RelayCommand(o => Print("9")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "DarkOrange", GridColumn = 3, GridRow = 1, Content = "x", PressBtn = new RelayCommand(o => Print("x")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 2, Content = "4", PressBtn = new RelayCommand(o => Print("4")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 2, Content = "5", PressBtn = new RelayCommand(o => Print("5")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 2, Content = "6", PressBtn = new RelayCommand(o => Print("6")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "DarkOrange", GridColumn = 3, GridRow = 2, Content = "-", PressBtn = new RelayCommand(o => Print("-")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 0, GridRow = 3, Content = "1", PressBtn = new RelayCommand(o => Print("1")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 3, Content = "2", PressBtn = new RelayCommand(o => Print("2")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 2, GridRow = 3, Content = "3", PressBtn = new RelayCommand(o => Print("3")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "DarkOrange", GridColumn = 3, GridRow = 3, Content = "+", PressBtn = new RelayCommand(o => Print("+")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "20", BtnColor = "#FFEB5B15", GridColumn = 0, GridRow = 4, Content = "Insert", PressBtn = new RelayCommand(o => Insert()) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "#FF4D4D4D", GridColumn = 1, GridRow = 4, Content = "0",  PressBtn = new RelayCommand(o => Print("0")) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "20", BtnColor = "#FFEB5B15", GridColumn = 2, GridRow = 4, Content = "Query", PressBtn = new RelayCommand(o => Query()) });
+            Buttons.Add(new ButtonViewmodel { FontSize = "35", BtnColor = "DarkOrange", GridColumn = 3, GridRow = 4,  Content = "=", PressBtn = new RelayCommand(o => Calculate()) });
         }
 
-        private int sum = 0;  //store the result
         int flag = 0;
 
         void Print(string str)
@@ -91,7 +91,6 @@ namespace MVVMExample.Viewmodel
         void Clear()
         {
             Content = "0";
-            sum = 0;
             flag = 0;
             Postorder = null;
             Preorder = null;

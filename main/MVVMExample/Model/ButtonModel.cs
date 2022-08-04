@@ -12,7 +12,7 @@ namespace MVVMExample.Model
         public int GridRow { get; set; }
         public int GridColumnSpan { get; set; }
         public string Content { get; set; }
- 
         public string BtnColor { get; set; }
+        public string FontSize { get; set; }
     }
 }

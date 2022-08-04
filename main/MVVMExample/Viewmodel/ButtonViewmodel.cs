@@ -36,10 +36,14 @@ namespace MVVMExample.Viewmodel
             get { return _buttonModel.Content; }
             set { _buttonModel.Content = value; OnPropertyChanged(); }
         }
-
         public string BtnColor {
             get { return _buttonModel.BtnColor; }
             set { _buttonModel.BtnColor = value; OnPropertyChanged(); }
+        }
+        public string FontSize
+        {
+            get { return _buttonModel.FontSize; }
+            set { _buttonModel.FontSize = value; OnPropertyChanged(); }
         }
     }
 }
