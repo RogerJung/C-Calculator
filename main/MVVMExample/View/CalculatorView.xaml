@@ -101,6 +101,5 @@
         <Label Content="Decimal" HorizontalAlignment="Left" Margin="616,368,0,0" VerticalAlignment="Top" Height="41" Width="90" Foreground="White" FontSize="20"/>
         <Label Content="{Binding Binary}" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="493,519,0,0" VerticalAlignment="Top" Background="White" Height="54" Width="213" FontSize="30"/>
         <Label Content="Binary" HorizontalAlignment="Left" Margin="639,473,0,0" VerticalAlignment="Top" Height="41" Width="67" Foreground="White" FontSize="20"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="500,64,0,0" VerticalAlignment="Top" Height="43" Width="121" Click="Button_Click"/>
     </Grid>
 </UserControl>

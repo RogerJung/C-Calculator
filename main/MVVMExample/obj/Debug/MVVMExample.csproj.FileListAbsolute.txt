@@ -79,3 +79,46 @@ C:\Users\James\Documents\GitHub\C-Calculator\main\MVVMExample\bin\Debug\System.M
 C:\Users\James\Documents\GitHub\C-Calculator\main\MVVMExample\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\James\Documents\GitHub\C-Calculator\main\MVVMExample\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\James\Documents\GitHub\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.csproj.CopyComplete
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\MVVMExample.exe.config
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\MVVMExample.exe
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\MVVMExample.pdb
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\BouncyCastle.Crypto.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\Google.Protobuf.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\K4os.Compression.LZ4.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\K4os.Hash.xxHash.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\MySql.Data.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Buffers.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Memory.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Numerics.Vectors.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\Ubiety.Dns.Core.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\ZstdNet.dll
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\BouncyCastle.Crypto.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\Google.Protobuf.pdb
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\Google.Protobuf.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\K4os.Compression.LZ4.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\K4os.Hash.xxHash.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\MySql.Data.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Buffers.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Memory.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Numerics.Vectors.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.csproj.AssemblyReference.cache
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.csproj.SuggestedBindingRedirects.cache
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MainWindow.g.cs
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\View\CalculatorView.g.cs
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\App.g.cs
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample_MarkupCompile.cache
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample_MarkupCompile.lref
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MainWindow.baml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\View\CalculatorView.baml
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.g.resources
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.Properties.Resources.resources
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.csproj.GenerateResource.cache
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.csproj.CoreCompileInputs.cache
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.csproj.CopyComplete
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.exe
+D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.pdb
