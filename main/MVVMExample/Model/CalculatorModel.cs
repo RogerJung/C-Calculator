@@ -11,7 +11,7 @@ namespace MVVMExample.Model
         public string Content { get; set; } = "0";
         public string Preorder { get; set; } = string.Empty;
         public string Postorder { get; set; } = string.Empty;
-        public string Decimal { get; set; }
-        public string Binary { get; set; }
+        public string Decimal { get; set; } = string.Empty;
+        public string Binary { get; set; } = string.Empty;
     }
 }

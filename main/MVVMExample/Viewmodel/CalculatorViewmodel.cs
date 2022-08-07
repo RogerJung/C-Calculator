@@ -24,6 +24,11 @@ namespace MVVMExample.Viewmodel
             QueryCmd = new RelayCommand(o => Query());
             Loadcalculator();
         }
+
+        //setting mysql connect
+        static string connectionString = "dataSource=localhost;username=root;PASSWORD=;";
+        MySqlConnection connection = new MySqlConnection(connectionString);
+
         public string Content
         {
             get { return _calculatorModel.Content; }
@@ -233,9 +238,10 @@ namespace MVVMExample.Viewmodel
                 sum /= 2;
                 i++;
             }
-            for (i = chars.Length - 1; i >= 0; i--)
+            while(i > 0)
             {
                 Binary += chars[i];
+                i--;
             }
         }
 
@@ -251,18 +257,25 @@ namespace MVVMExample.Viewmodel
 
         void Insert()
         {
-            string connectionString = "dataSource=localhost;username=root;PASSWORD=;";
-
-            MySqlConnection connection = new MySqlConnection(connectionString);
-
-            MySqlCommand cmd = new MySqlCommand("Insert Into calculate.data (Inorder,Preorder) values (123,23)", connection);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
+            connection.Open();
+            MySqlCommand cmd1 = new MySqlCommand("select * from calculate.data where Inorder  = \'" + Content + "\'", connection);
+            int numRow = Convert.ToInt32(cmd1.ExecuteScalar());
+            if (numRow > 0)
+            {
+                MessageBox.Show("Database already have same data!", "Error");
+            }
+            else
+            {
+                MySqlCommand cmd2 = new MySqlCommand("Insert Into calculate.data (Inorder,Preorder,Postorder,Deci,Bin) values (\'" + Content + "\',\'" + Preorder + "\',\'" + Postorder + "\',\'" + Decimal + "\',\'" + Binary + "\')", connection);
+                int index = cmd2.ExecuteNonQuery();
+            }
+            connection.Close();
         }
+
         void Query()
         {
-           
+            Window window = new QueryView();
+            window.Show();
         }
     }
 }
