@@ -268,6 +268,7 @@ namespace MVVMExample.Viewmodel
             {
                 MySqlCommand cmd2 = new MySqlCommand("Insert Into calculate.data (Inorder,Preorder,Postorder,Deci,Bin) values (\'" + Content + "\',\'" + Preorder + "\',\'" + Postorder + "\',\'" + Decimal + "\',\'" + Binary + "\')", connection);
                 int index = cmd2.ExecuteNonQuery();
+                MessageBox.Show("Insert sucessfully!","Message");
             }
             connection.Close();
         }
