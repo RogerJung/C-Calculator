@@ -7,12 +7,8 @@
         mc:Ignorable="d"
         Title="Window1" Height="350" Width="500" Background="Black">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="333*"/>
-        </Grid.ColumnDefinitions>
-        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="237" Margin="25,32,0,0" VerticalAlignment="Top" Width="323" d:ItemsSource="{d:SampleData ItemCount=5}" Loaded="dataTable_Loaded" Grid.ColumnSpan="2" SelectionChanged="dataGrid_SelectionChanged"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="227,196,0,0" VerticalAlignment="Top" Height="35" Width="65" Click="Button_Click" Grid.Column="1"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="270" Margin="10,10,0,0" VerticalAlignment="Top" Width="350"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="392,204,0,0" VerticalAlignment="Top" Height="35" Width="65" Click="Button_Click"/>
 
     </Grid>
 </Window>
