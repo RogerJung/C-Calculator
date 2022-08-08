@@ -124,3 +124,5 @@ D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.exe
 D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\MVVMExample.pdb
 D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\View\QueryView.g.cs
 D:\HCI Lab\c#\C-Calculator\main\MVVMExample\obj\Debug\View\QueryView.baml
+C:\Users\James\Documents\GitHub\C-Calculator\main\MVVMExample\obj\Debug\View\QueryView.g.cs
+C:\Users\James\Documents\GitHub\C-Calculator\main\MVVMExample\obj\Debug\View\QueryView.baml

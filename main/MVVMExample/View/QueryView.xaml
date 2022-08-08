@@ -5,10 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVMExample.View"
         mc:Ignorable="d"
-        Title="Window1" Height="350" Width="500">
+        Title="Window1" Height="350" Width="500" Background="Black">
     <Grid>
-        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="237" Margin="25,32,0,0" VerticalAlignment="Top" Width="323" d:ItemsSource="{d:SampleData ItemCount=5}" Loaded="dataTable_Loaded"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="394,196,0,0" VerticalAlignment="Top" Height="35" Width="65"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="333*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="237" Margin="25,32,0,0" VerticalAlignment="Top" Width="323" d:ItemsSource="{d:SampleData ItemCount=5}" Loaded="dataTable_Loaded" Grid.ColumnSpan="2" SelectionChanged="dataGrid_SelectionChanged"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="227,196,0,0" VerticalAlignment="Top" Height="35" Width="65" Click="Button_Click" Grid.Column="1"/>
 
     </Grid>
 </Window>
